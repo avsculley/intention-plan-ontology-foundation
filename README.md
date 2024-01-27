@@ -1,2 +1,2 @@
 # intention-plan-ontology-foundation
-BFO and CCO conformant foundations for an ontology of intentions and plans.
+BFO and CCO conformant foundations for a representational ontology of intentions and plans (forthcoming).
