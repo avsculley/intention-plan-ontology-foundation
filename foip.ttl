@@ -1,0 +1,159 @@
+@prefix : <http://www.semanticweb.org/alecsculley/ontologies/FOIP#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alecsculley/ontologies/FOIP> .
+
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP> rdf:type owl:Ontology ;
+                                                          <http://purl.org/dc/elements/1.1/contributor> "Alec Sculley" ;
+                                                          rdfs:comment "Imports BFO, CCO, and CPO." ;
+                                                          rdfs:label "Foundations for an Ontology of Intentions and Plans" ;
+                                                          owl:versionInfo "Work in progress. Comments welcome." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+<http://purl.obolibrary.org/obo/RO_0000059> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_fused_with
+<http://www.ontologyrepository.com/CommonCoreOntologies/is_fused_with> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+<http://purl.obolibrary.org/obo/BFO_0000019> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionSpecification
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionSpecification> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ConativeRepresenation
+<http://www.ontologyrepository.com/CommonCoreOntologies/ConativeRepresenation> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MentalQuality
+<http://www.ontologyrepository.com/CommonCoreOntologies/MentalQuality> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ObjectiveSpecification
+<http://www.ontologyrepository.com/CommonCoreOntologies/ObjectiveSpecification> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Representation
+<http://www.ontologyrepository.com/CommonCoreOntologies/Representation> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalComplex
+<http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalComplex> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000001
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000001> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> ;
+                                                                 rdfs:label "PlanComponentSpecification"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000002
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000002> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Representation> ;
+                                                                 rdfs:label "PlanComponent"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000003
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000003> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000002> ;
+                                                                 rdfs:label "HierarchicalPlanComponent"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000004
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000004> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                                 owl:disjointWith <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000005> ;
+                                                                 rdfs:label "HierarchyValue"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000005
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000005> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MentalQuality> ;
+                                                                 rdfs:label "CommitmentValue"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000006
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000006> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalComplex> ;
+                                                                 rdfs:label "Plan"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000007
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000007> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000006> ;
+                                                                 rdfs:label "HierarchicalPlan"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000008
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000008> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ConativeRepresenation> ;
+                                                                 rdfs:label "Intention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000009
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000009> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000008> ;
+                                                                 owl:disjointWith <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000010> ;
+                                                                 rdfs:label "CompoundIntention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000010
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000010> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000008> ;
+                                                                 rdfs:label "SimpleIntention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000011
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000011> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000010> ;
+                                                                 owl:disjointWith <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000012> ;
+                                                                 rdfs:label "ActionIntention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000012
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000012> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000010> ;
+                                                                 rdfs:label "ObjectiveIntention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000013
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000013> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000009> ;
+                                                                 owl:disjointWith <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000014> ;
+                                                                 rdfs:label "CausalCompoundIntention"@en .
+
+
+###  http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000014
+<http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000014> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/alecsculley/ontologies/FOIP/0000009> ;
+                                                                 rdfs:label "ConstitutiveCompoundIntention"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
